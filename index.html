@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Compra y Alquiler de Películas</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+<main>
+    <div class="container">
+        <h1>Bienvenido a nuestro sistema de compra y alquiler de películas para la entrega 2</h1>
+        
+        <div class="actions">
+            <button id="comprar">Comprar Película</button>
+            <button id="alquilar">Alquilar Película</button>
+            <button id="verCarrito">Ver Carrito</button>
+            <button id="finalizarCompra">Finalizar Compra</button>
+        </div>
+        
+        <div id="peliculasDisponibles" class="hidden">
+            <h2>Películas Disponibles</h2>
+            <ul id="listaPeliculas"></ul>
+        </div>
+        
+        <div id="carrito" class="hidden">
+            <h2>Carrito de Compras</h2>
+            <ul id="listaCarrito"></ul>
+            <p>Total: <span id="totalCarrito"></span> pesos</p>
+        </div>
+
+        <div id="finalizar" class="hidden">
+            <h2>Finalizar Compra</h2>
+            <p>Total de la compra: <span id="totalFinalizar"></span> pesos</p>
+            <p>Seleccione la forma de pago:</p>
+            <button id="pagoEfectivo">Pagar en Efectivo</button>
+            <button id="pagoCuotas">Pagar en Cuotas</button>
+        </div>
+
+        <div id="cuotas" class="hidden">
+            <p>Ingrese la cantidad de cuotas (3 o 6):</p>
+            <input type="number" id="cantidadCuotas" min="3" max="6" step="3">
+            <button id="calcularCuotas">Calcular</button>
+        </div>
+
+        <div id="resultadoCuotas" class="hidden">
+            <p>Total a pagar con intereses: <span id="totalInteres"></span> pesos</p>
+            <p>Cuotas de <span id="valorCuota"></span> pesos cada una.</p>
+            <p>¡Gracias por su compra!</p>
+        </div>
+    </div>
+</main>
+    <script src="./javascript/index.js"></script>
+</body>
+</html>
